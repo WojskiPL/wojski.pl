@@ -1,8 +1,88 @@
+html {
+  scroll-behavior: smooth;
+}
+  
+  
+::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+}
+  
+::-webkit-scrollbar-thumb {
+      background: linear-gradient(#00ccff, #d400d4);
+      border-radius: 10px;
+  
+     }
+  
+::-webkit-scrollbar-thumb:hover{
+  
+      background: linear-gradient(#00ccff, #d400d4);
+  
+     }
+  
+::-webkit-scrollbar-track{
+  
+      background: #0e1538 !important;
+  
+      border-radius: 9px;
+  
+     }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
+ }
+ body {
+   background: #0e1538;
+ }
+ .card
+ {
+   position: relative;
+   width: 200px;
+   height: 300px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: rgba(0,0,0,0.5);
+   overflow: hidden;
+   border-radius: 20px;
+   margin-top: 50px;
+   margin-left: 300px;
+ }
+ .card a
+ {
+    position: relative;
+    color: #fff;
+    font-size: 50px;
+    z-index: 10;
+ }
+ .card::before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 140%;
+    background: linear-gradient(#00ccff, #d400d4);
+    animation: animate 4s linear infinite;
+ }
+ .card::after
+ {
+   content: '';
+   position: absolute;
+   inset: 4px;
+   background: #0e1538;
+   border-radius: 16px;
+ }
+ @keyframes animate
+ {
+   0%
+   {
+     transform: rotate(0deg);
+   }
+   100%
+   {
+     transform: rotate(300deg);
+   }
  }
  a {
   text-decoration: none;
@@ -11,6 +91,7 @@
   list-style: none;
  }
 #prac {
+  color: #fff;
   margin-top: 10px;
   margin-left: 620px;
   font-family: 'Lato', sans-serif;
@@ -25,14 +106,14 @@
   font-size: 30px;
 }
 #prace-linki {
-  color: black;
+  color: #fff;
 }
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: #3c69a0;
+  background: linear-gradient(#00ccff, #d400d4);
   color: #fff;
  }
  .nav-linki a {
